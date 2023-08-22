@@ -1,10 +1,11 @@
-#include "graph.h"
 #include <iostream>
+#include "graph.h"
 
 void Vertex::AddToAdjacentList(Vertex* vertex){
     //TODO: Add 'vertex' to adjacency list (class member) 
     adjacency_list_.push_back(vertex);
 }
+
 
 Graph::~Graph(){
     for (auto vertex: vertices_) delete vertex;
@@ -24,11 +25,10 @@ void Graph::GenEdge(Vertex* start, Vertex* end){
 }
 
 void Graph::PrintGraph() {
-    std::cout << "============== Defined Graph ==============" <<
-    std::endl;
+    std::cout << "============== Defined Graph ==============" << std::endl;
     
     for (auto v : vertices_){
-        std::cout << "Vertex " << v -> GetName() << ', Adjacency List: ';
+        std::cout << "Vertex " << v -> GetName() << ", Adjacency List: ";
 
         bool is_first = true;
 
@@ -36,9 +36,9 @@ void Graph::PrintGraph() {
             if (is_first == false){
                 std::cout << ", ";
             }
-            std::cout << "Vertex " << neighbor->GetName() << ',' ; 
+            std::cout << "Vertex " << neighbor->GetName(); 
             is_first = false;
         }
-        std::cout << 'endl';
+        std::cout << std::endl;
     }
 } 

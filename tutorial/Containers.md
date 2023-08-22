@@ -11,6 +11,12 @@
 | A doubly linked list | deque | list|
 | A dhynamic set of unordered unique values| set| unordered_set|
 
+- std::tuple , std::make_tuple()
+  - more than 2 elements 
+  - get
+  
+- std::pair , std::make_pair()
+  - pair (only 2 elements) 
 ```c++ 
 // constructing vectors
 #include <iostream>
