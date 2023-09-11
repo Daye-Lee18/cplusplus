@@ -8,8 +8,8 @@ void Vertex::AddToAdjacentList(Vertex* vertex){
 
 
 Graph::~Graph(){
-    for (auto vertex: vertices_) delete vertex;
-    vertices_.clear();
+    for (auto vertex: vertices_) delete vertex; // 할당된 메모리를 지우고 
+    vertices_.clear(); // vector안의 원소들도 지움 
 }
 
 Vertex* Graph::GenVertex(std::string name){
