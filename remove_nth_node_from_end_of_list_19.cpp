@@ -35,6 +35,8 @@ class Solution {
       return head->next;
 
     // 만약 지워야 하는 node의 다음이 존재한다면, 
+    // fast가 tail일 때 까지 간다면, """fast와 slow의 차이는 n""" 만큼 존재해야 지워야 하는 노드 바로 앞에 slow를 만들 수 있다. |--------slow-> ----n---> fast(tail)|
+    // 따라서 맨 앞에서 fast 혼자 먼저 n번 만큼 먼저 진행해준다. 
     while (fast->next) {
       slow = slow->next; // 2 -> 3 
       fast = fast->next; // 4 -> 5 
